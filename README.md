@@ -1,3 +1,5 @@
+**I will be updating this library to Raylib 5.0 over the summer of 2024**
+
 <img src="https://gitlab.com/wolfenrain/dart-raylib/-/raw/main/logo/raylib-dart_256x256.png" width="256px">
 
 # Raylib
