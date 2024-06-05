@@ -35,15 +35,15 @@ You need to tell the package where it can find your raylib library:
 ```dart
 initLibrary(
   linux: '../include/libraylib.so',
-  windows: '../somewhere/else',
+  windows: '../somewhere/else.dll',
 );
 ```
 
 See the [example](https://gitlab.com/wolfenrain/dart-raylib/-/tree/main/example/lib) directory for examples.
 
-## Development
+# Development
 
-### Linux
+## Linux
 
 You need to have both `make` and `git` installed: 
 
@@ -64,8 +64,31 @@ cd vendor/raylib/src
 make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED
 ```
 
-Then copy the compiled library to the example folder:
+### Examples
+To run the examples copy the compiled library to the example folder:
 
 ```sh
 cp ../libraylib.so.4.0.0 ../../../example/include/libraylib.so
 ```
+
+## Windows
+
+You need to have `make`, `git`, and a c++ compiler on PATH
+- I recommend installing [scoop](https://scoop.sh/#/) and using it to install [MinGW](https://www.mingw-w64.org/)
+
+After that you can check out the submodules:
+
+```sh
+git submodule update --init --recursive
+```
+
+With the submodules downloaded you can start compiling `raylib`:
+
+```sh
+cd vendor/raylib/src
+make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED
+```
+
+### Examples
+
+WIP
